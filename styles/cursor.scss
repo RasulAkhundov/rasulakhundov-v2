@@ -1,0 +1,42 @@
+.cursorWrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   transform-origin: center;
+   border-radius: 50%;
+   pointer-events: none;
+   transition: width 300ms linear, height 300ms linear, border 300ms linear, background 300ms linear;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999;
+   mix-blend-mode: difference;
+
+   span {
+      color: var(--black);
+      font-size: 17.5px;
+      line-height: 1;
+      font-family: var(--regular);
+   }
+}
+
+.button_hover__default {
+   width: 25px;
+   height: 25px;
+   border: 0;
+   background: var(--yellow);
+}
+
+.button_hover__anim {
+   width: 25px;
+   height: 25px;
+   border: 2px solid var(--white);
+   background: var(--transparent);
+}
+
+/////1200px down
+@media screen and (max-width: 1200px) {
+   .cursorWrapper {
+      display: none;
+   }
+}

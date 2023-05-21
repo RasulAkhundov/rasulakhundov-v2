@@ -1,0 +1,203 @@
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   z-index: 99;
+   opacity: 0;
+   transition: opacity 350ms var(--transition);
+   mix-blend-mode: difference;
+
+   .navbarInner {
+      width: 1248px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      // LOGO START
+      .logoA {
+         text-decoration: none;
+         width: 40px;
+         height: 50px;
+
+         .logoSvg {
+            width: 100%;
+            height: 100%;
+
+            path {
+               transition: all 300ms var(--transition);
+               width: 100%;
+               height: 100%;
+            }
+
+            &:hover {
+               path {
+                  fill: var(--yellow)
+               }
+            }
+         }
+      }
+
+      //LOGO END
+
+      // AVALIABLE HIRE START
+      .avaliableHire {
+         width: 330px;
+         height: 2.6em;
+         display: flex;
+         align-items: center;
+         background: var(--transparent);
+         border: 1.5px solid var(--white);
+         border-radius: 10em;
+         overflow: hidden;
+         user-select: none;
+         cursor: pointer;
+
+         .marqueeScroller {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            .marqueeInner {
+               display: flex;
+               align-items: center;
+
+               h2 {
+                  font-size: 1.5em;
+                  line-height: 0.95;
+                  white-space: nowrap;
+                  min-width: 9em;
+                  color: var(--white);
+                  display: flex;
+                  align-items: center;
+                  font-family: var(--regular);
+
+                  .marqueeDot {
+                     min-width: 0.3vw;
+                     min-height: 0.3vw;
+                     border-radius: 50%;
+                     background: var(--white);
+                     margin: 0 0.3em;
+                  }
+               }
+            }
+         }
+      }
+
+      // AVALIABLE HIRE END
+
+      // CONTACT BUTTON START
+      .contactButton {
+         text-decoration: none;
+
+         button {
+            padding: 0.7em 1.1em 0.7em;
+            font-size: 1.2em;
+            line-height: 0.95;
+            color: var(--black);
+            border-radius: 3.13em;
+            background: var(--white);
+            font-family: var(--bold);
+            border: 0;
+            cursor: pointer;
+            transition: all 300ms var(--transition);
+
+            &:hover {
+               background: var(--yellow);
+            }
+         }
+      }
+
+      // CONTACT BUTTON END
+   }
+}
+
+/////1440px down
+@media screen and (max-width: 1440px) {
+   .navbar {
+      padding: 0 96px;
+
+      .navbarInner {
+         width: 100%;
+      }
+   }
+}
+
+/////990px down
+@media screen and (max-width: 990px) {
+   .navbar {
+      padding: 0 64px;
+      height: 90px;
+
+      .navbarInner {
+
+         .logoA {
+            width: 40px;
+            height: 50px;
+         }
+
+         .avaliableHire {
+            width: 250px;
+            height: 2em;
+
+            .marqueeScroller {
+               .marqueeInner {
+                  h2 {
+                     font-size: 1.2em;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/////755px down
+@media screen and (max-width: 755px) {
+   .navbar {
+      padding: 0 40px;
+      height: 80px;
+
+      .navbarInner {
+
+         .logoA {
+            width: 30px;
+            height: 40px;
+         }
+      }
+   }
+}
+
+/////900px down
+@media screen and (max-width: 900px) {
+   .navbar {
+      .navbarInner {
+         .avaliableHire {
+            display: none;
+         }
+      }
+   }
+}
+
+/////584px down
+@media screen and (max-width: 584px) {
+   .navbar {
+      padding: 0 24px;
+      height: 70px;
+
+      .navbarInner {
+
+         .logoA {
+            width: 30px;
+            height: 40px;
+         }
+      }
+   }
+}
