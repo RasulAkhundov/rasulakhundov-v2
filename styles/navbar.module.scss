@@ -11,6 +11,7 @@
    opacity: 0;
    transition: opacity 350ms var(--transition);
    mix-blend-mode: difference;
+   pointer-events: none;
 
    .navbarInner {
       width: 1248px;
@@ -24,6 +25,7 @@
          text-decoration: none;
          width: 40px;
          height: 50px;
+         pointer-events: all;
 
          .logoSvg {
             width: 100%;
@@ -52,11 +54,12 @@
          display: flex;
          align-items: center;
          background: var(--transparent);
-         border: 1.5px solid var(--white);
+         border: 0.5px solid var(--white);
          border-radius: 10em;
          overflow: hidden;
          user-select: none;
          cursor: pointer;
+         pointer-events: all;
 
          .marqueeScroller {
             width: 100%;
@@ -73,7 +76,6 @@
                   font-size: 1.5em;
                   line-height: 0.95;
                   white-space: nowrap;
-                  min-width: 9em;
                   color: var(--white);
                   display: flex;
                   align-items: center;
@@ -96,6 +98,7 @@
       // CONTACT BUTTON START
       .contactButton {
          text-decoration: none;
+         pointer-events: all;
 
          button {
             padding: 0.7em 1.1em 0.7em;
@@ -159,6 +162,17 @@
    }
 }
 
+/////900px down
+@media screen and (max-width: 900px) {
+   .navbar {
+      .navbarInner {
+         .avaliableHire {
+            display: none;
+         }
+      }
+   }
+}
+
 /////755px down
 @media screen and (max-width: 755px) {
    .navbar {
@@ -170,17 +184,6 @@
          .logoA {
             width: 30px;
             height: 40px;
-         }
-      }
-   }
-}
-
-/////900px down
-@media screen and (max-width: 900px) {
-   .navbar {
-      .navbarInner {
-         .avaliableHire {
-            display: none;
          }
       }
    }

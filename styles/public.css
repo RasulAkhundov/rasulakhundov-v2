@@ -27,11 +27,12 @@
    --black: #000;
    --chineseBlack: #0f171f;
    --white: #fff;
-   --yellow: #d6cd9d;
+   --yellow: #F6AE4C;
    --transparent: transparent;
    --transition: cubic-bezier(.06, .54, .9, .94);
    --bold: 'Bold';
    --regular: 'Regular';
+   --silver: #e5e5e5;
 }
 
 ::-webkit-scrollbar {
@@ -73,7 +74,7 @@ main {
    width: 100%;
    position: relative;
    font-size-adjust: auto;
-   background: var(--chineseBlack);
+   background: var(--white);
    -webkit-font-smoothing: antialiased;
 }
 

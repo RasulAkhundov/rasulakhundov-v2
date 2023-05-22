@@ -5,7 +5,7 @@ function Loading() {
    return (
       <div className={LoadingStyle.loadingWrapper} id='loadingWrapper'>
          <div className={LoadingStyle.loadingInner}>
-            <h2 id="pageLoadingText">Salam</h2>
+            <h2 id="pageLoadingText">Hello</h2>
             <div className={LoadingStyle.circleWrapper} id='loading_circle__wrapper'></div>
          </div>
       </div>

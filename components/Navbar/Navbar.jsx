@@ -1,4 +1,3 @@
-"use client";
 import { useEffect } from 'react';
 
 ////PLUGINS
@@ -43,21 +42,21 @@ function Navbar() {
                <div className={NavbarStyle.marqueeScroller}>
                   <div className={NavbarStyle.marqueeInner}>
                      <h2>
-                        AVALIABLE FOR HIRE
+                        Avaliable for hire
                         <div className={NavbarStyle.marqueeDot}></div>
                      </h2>
                      <h2>
-                        AVALIABLE FOR HIRE
+                        Avaliable for hire
                         <div className={NavbarStyle.marqueeDot}></div>
                      </h2>
                   </div>
                   <div className={NavbarStyle.marqueeInner}>
                      <h2>
-                        AVALIABLE FOR HIRE
+                        Avaliable for hire
                         <div className={NavbarStyle.marqueeDot}></div>
                      </h2>
                      <h2>
-                        AVALIABLE FOR HIRE
+                        Avaliable for hire
                         <div className={NavbarStyle.marqueeDot}></div>
                      </h2>
                   </div>
@@ -66,8 +65,8 @@ function Navbar() {
             {/* AVALIABLE END */}
 
             {/* CONTACT BUTTON START */}
-            <a href="mailto:rasuldev@mail.ru" className={`${NavbarStyle.contactButton} button_hover navbar_contact_magnetic__button`}>
-               <button type='button'>CONTACT</button>
+            <a href="mailto:rasuldev@mail.ru" className={`${NavbarStyle.contactButton} button_hover`}>
+               <button type='button'>Contact</button>
             </a>
             {/* CONTACT BUTTON END */}
          </div>

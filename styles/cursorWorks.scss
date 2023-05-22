@@ -1,0 +1,50 @@
+.cursorWorksWrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   transform-origin: center;
+   pointer-events: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 998;
+   overflow: hidden;
+   width: 0;
+   height: 250px;
+   transition: width 500ms linear, height 300ms linear, border 500ms linear, background 300ms linear;
+
+   .workImage {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+.onveivWorkImg {
+   background: url('../public/works/onveiv.png');
+}
+
+.monkigoWorkImg {
+   background: url('../public/works/monkigo.png');
+}
+
+.techvioWorkImg {
+   background: url('../public/works/techvio.png');
+}
+
+.nftWorkImg {
+   background: url('../public/works/nft.png');
+}
+
+.petshopWorkImg {
+   background: url('../public/works/petshop.png');
+}
+
+/////1200px down
+@media screen and (max-width: 1200px) {
+   .cursorWorksWrapper {
+      display: none;
+   }
+}

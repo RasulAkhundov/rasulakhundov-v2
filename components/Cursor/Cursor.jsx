@@ -24,32 +24,53 @@ function Cursor() {
 
       /////////CURSOR BUTTON HOVER ANIMATION
       $('.button_hover').on('mouseenter', (e) => {
+         $(`.cursorWrapper`).removeClass('works_hover__anim');
          $(`.cursorWrapper`).removeClass('button_hover__default');
          $(`.cursorWrapper`).addClass('button_hover__anim');
-         $(`.cursorWrapper`).text('');
+         $('#cursorText').text('');
       });
 
       $('.button_hover').on('mouseleave', () => {
+         $(`.cursorWrapper`).removeClass('works_hover__anim');
          $(`.cursorWrapper`).removeClass('button_hover__anim');
          $(`.cursorWrapper`).addClass('button_hover__default');
+         $('#cursorText').text('');
+      });
+
+      /////////CURSOR WORKS HOVER ANIMATION
+      $('.works_hover').on('mouseenter', (e) => {
+         $(`.cursorWrapper`).removeClass('button_hover__default');
+         $(`.cursorWrapper`).removeClass('button_hover__anim');
+         $(`.cursorWrapper`).addClass('works_hover__anim');
+         $('#cursorText').text('Visit site');
+         $('.cursorWorksWrapper').css('width', '400px');
+      });
+
+      $('.works_hover').on('mouseleave', (e) => {
+         $(`.cursorWrapper`).removeClass('button_hover__anim');
+         $(`.cursorWrapper`).removeClass('works_hover__anim');
+         $(`.cursorWrapper`).addClass('button_hover__default');
+         $('#cursorText').text('');
+         $('.cursorWorksWrapper').css('width', '0');
       });
 
 
       if (window.innerWidth >= 1200) {
          ////////CURSOR BUTTON MAGNETIC ANIMATION
-         $('.navbar_contact_magnetic__button').on('mouseenter', (e) => {
-            gsap.to('.navbar_contact_magnetic__button', { duration: 0.3 });
-            gsap.to($(e.currentTarget).find('button'), { duration: 0.3 });
+         $('.magnetic__button').on('mouseenter', (e) => {
+            gsap.to('.magnetic__button', { duration: 0.7 });
+            gsap.to($(e.currentTarget).find('button'), { duration: 0.7 });
          });
 
-         $('.navbar_contact_magnetic__button').on('mouseleave', (e) => {
-            gsap.to('.navbar_contact_magnetic__button', { duration: 0.3 });
-            gsap.to($(e.currentTarget).find('button'), { duration: 0.3, x: 0, y: 0 });
+         $('.magnetic__button').on('mouseleave', (e) => {
+            gsap.to('.magnetic__button', { duration: 0.5 });
+            gsap.to($(e.currentTarget).find('button'), { duration: 0.5, x: 0, y: 0 });
          })
 
-         $('.navbar_contact_magnetic__button').on('mousemove', (e) => {
-            parallaxIt(e, 25);
+         $('.magnetic__button').on('mousemove', (e) => {
+            parallaxIt(e, 80);
          });
+
       }
    });
 
@@ -58,7 +79,7 @@ function Cursor() {
       var relX = e.pageX - $this.offset().left;
       var relY = e.pageY - $this.offset().top;
 
-      gsap.to('.navbar_contact_magnetic__button button', {
+      gsap.to($(e.currentTarget).children()[0], {
          duration: 0.3,
          x: (relX - $this.width() / 2) / $this.width() * movement,
          y: (relY - $this.height() / 2) / $this.height() * movement,
@@ -68,7 +89,7 @@ function Cursor() {
 
    return (
       <div className="cursorWrapper button_hover__default">
-         <span className={cursorStyle.cursorText}></span>
+         <span className={cursorStyle.cursorText} id='cursorText'></span>
       </div>
    )
 }

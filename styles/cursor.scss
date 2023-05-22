@@ -10,13 +10,14 @@
    align-items: center;
    justify-content: center;
    z-index: 999;
-   mix-blend-mode: difference;
+   overflow: hidden;
 
    span {
       color: var(--black);
-      font-size: 17.5px;
+      font-size: 15px;
       line-height: 1;
       font-family: var(--regular);
+      display: none;
    }
 }
 
@@ -25,6 +26,7 @@
    height: 25px;
    border: 0;
    background: var(--yellow);
+   mix-blend-mode: difference;
 }
 
 .button_hover__anim {
@@ -32,6 +34,19 @@
    height: 25px;
    border: 2px solid var(--white);
    background: var(--transparent);
+   mix-blend-mode: difference;
+}
+
+.works_hover__anim {
+   width: 100px;
+   height: 100px;
+   border: 0;
+   background: var(--yellow);
+
+   span {
+      display: flex;
+      min-width: 60px;
+   }
 }
 
 /////1200px down
