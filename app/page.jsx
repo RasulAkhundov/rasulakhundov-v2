@@ -12,6 +12,7 @@ import Image from 'next/image';
 import ArrowRightDown from '../public/arrow/right-down.png';
 import ArrowLeftDown from '../public/arrow/left-down.png';
 import Globe from '../public/header/globe.png';
+import FooterLogoWhite from '../public/logo/logo-w.png';
 
 ////COMPONENTS
 import Cursor from '@/components/Cursor/Cursor';
@@ -312,7 +313,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
                 <h2>NodeJS</h2>
@@ -348,7 +349,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
             </div>
             <div className={homeStyle.singleScroller} data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal">
@@ -386,7 +387,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
                 <h2>NodeJS</h2>
@@ -422,7 +423,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
             </div>
             <div className={homeStyle.singleScroller} data-scroll data-scroll-speed="4" data-scroll-direction="horizontal">
@@ -460,7 +461,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
                 <h2>NodeJS</h2>
@@ -496,7 +497,7 @@ function Home() {
                 <h2>Axios</h2>
               </div>
               <div className={homeStyle.scrollerItem}>
-                <h2>GSAP</h2>
+                <h2>Gsap</h2>
               </div>
             </div>
           </div>
@@ -523,6 +524,13 @@ function Home() {
                 </div>
 
                 <div className={homeStyle.innerBottom}>
+                  <Image
+                    src={FooterLogoWhite}
+                    width={40}
+                    height={50}
+                    alt='Logo White'
+                  />
+
                   <div className={homeStyle.footerSocials}>
                     <span>socials</span>
 
