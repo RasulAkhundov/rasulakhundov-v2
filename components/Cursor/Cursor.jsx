@@ -43,7 +43,7 @@ function Cursor() {
          $(`.cursorWrapper`).removeClass('button_hover__anim');
          $(`.cursorWrapper`).addClass('works_hover__anim');
          $('#cursorText').text('Visit site');
-         $('.cursorWorksWrapper').css('width', '400px');
+         $('.cursorWorksWrapper').css('width', '500px');
       });
 
       $('.works_hover').on('mouseleave', (e) => {

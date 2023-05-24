@@ -24,10 +24,11 @@ export const SmoothScrollProvider = ({ children, options }) => {
             }
          })()
       }
-
+      
+      // `useEffect`'s cleanup phase
       return () => {
-         scroll && scroll.destroy()
-      }
+         if (scroll) scroll.destroy();
+     }
    }, [scroll]) // eslint-disable-line react-hooks/exhaustive-deps
 
    return <SmoothScrollContext.Provider value={{ scroll }}>{children}</SmoothScrollContext.Provider>

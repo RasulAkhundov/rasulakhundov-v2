@@ -13,6 +13,7 @@ import ArrowRightDown from '../public/arrow/right-down.png';
 import ArrowLeftDown from '../public/arrow/left-down.png';
 import Globe from '../public/header/globe.png';
 import FooterLogoWhite from '../public/logo/logo-w.png';
+import ArrowRightBig from '../public/arrow/right-big.png';
 
 ////COMPONENTS
 import Cursor from '@/components/Cursor/Cursor';
@@ -84,6 +85,18 @@ function Home() {
       duration: 15,
       ease: "linear"
     });
+
+    // gsap.to('#movingArrow1', {
+    //   left: '100%',
+    //   scrollTrigger: {
+    //     trigger: '#servicesWrapper',
+    //     // scroller: '',
+    //     scrub: true,
+    //     start: "top bottom",
+    //     end: "top top",
+    //     onUpdate: self => console.log(self.direction)
+    //   }
+    // })
   })
 
   return (
@@ -220,13 +233,51 @@ function Home() {
           </div>
           {/* ABOUT END */}
 
+          {/* SECVICES WRAPPER START */}
+          <div className={homeStyle.servicesWrapper} id='#servicesWrapper' data-scroll-section>
+            <div className={homeStyle.wrap}>
+              <h2>User Experience</h2>
+              <div className={homeStyle.movingArrowWrap} id='movingArrow1' data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal" data-scroll-position="left">
+                <Image
+                  src={ArrowRightBig}
+                  width={100}
+                  height={100}
+                  alt='Arrow Right'
+                />
+              </div>
+            </div>
+            <div className={homeStyle.wrap}>
+              <h2>Responsive Design</h2>
+              <div className={homeStyle.movingArrowWrap} id='movingArrow2' data-scroll data-scroll-speed="-6.5" data-scroll-direction="horizontal" data-scroll-position="left">
+                <Image
+                  src={ArrowRightBig}
+                  width={100}
+                  height={100}
+                  alt='Arrow Right'
+                />
+              </div>
+            </div>
+            <div className={homeStyle.wrap}>
+              <h2>Optimization</h2>
+              <div className={homeStyle.movingArrowWrap} id='movingArrow3' data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal" data-scroll-position="left">
+                <Image
+                  src={ArrowRightBig}
+                  width={100}
+                  height={100}
+                  alt='Arrow Right'
+                />
+              </div>
+            </div>
+          </div>
+          {/* SERVICES WRAPPER END */}
+
           {/* WORKS WRAPPER START */}
           <div className={homeStyle.worksWrapper} data-scroll-section>
             <div className={homeStyle.worksWrapperInner}>
 
               <div className={homeStyle.worksWrapperTitle}>
                 <div className={homeStyle.worksWrapperTitleInner}>
-                  <span>works</span>
+                  <span>projects</span>
                 </div>
               </div>
 
