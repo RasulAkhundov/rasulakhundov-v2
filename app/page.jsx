@@ -164,7 +164,7 @@ function Home() {
 
             {/* BACKGROUND IMAGE START */}
             <div className={homeStyle.backgroundImgWrapper} id='headerImgWrapper'>
-              <div className={homeStyle.backgroundImg} data-scroll data-scroll-speed="-2"></div>
+              <div className={homeStyle.backgroundImg} data-scroll data-scroll-speed="-2" data-scroll-offset="0%, -30%"></div>
             </div>
             {/* BACKGROUND IMAGE END */}
 
