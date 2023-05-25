@@ -226,7 +226,7 @@ function Home() {
                 <span>My goal is to leverage my skills and knowledge to contribute to innovative projects and help businesses achieve their digital goals.</span>
               </div>
 
-              <a download href="../public/download/resume.pdf" className={`${homeStyle.downloadCv} button_hover magnetic__button`} data-scroll data-scroll-speed="1">
+              <a href="https://docs.google.com/uc?export=download&id=1ZsavUJkczr3yvYJfcRNefUIXhoM5RBL1" className={`${homeStyle.downloadCv} button_hover magnetic__button`} data-scroll data-scroll-speed="1">
                 <button type='sumbit'>Download CV</button>
               </a>
             </div>
