@@ -127,11 +127,13 @@ function Home() {
             smooth: true,
             direction: "vertical",
             touchMultiplier: 1,
+            multiplier: 2
           },
           tablet: {
             smooth: true,
             direction: "vertical",
             touchMultiplier: 1,
+            multiplier: 2
           }
         }}>
           {/* HEADER START */}
