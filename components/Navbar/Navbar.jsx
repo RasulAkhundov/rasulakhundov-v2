@@ -65,7 +65,7 @@ function Navbar() {
             {/* AVALIABLE END */}
 
             {/* CONTACT BUTTON START */}
-            <a href="mailto:rasuldev@mail.ru" className={`${NavbarStyle.contactButton} button_hover`}>
+            <a href="mailto:rasul.dev@mail.ru" className={`${NavbarStyle.contactButton} button_hover`}>
                <button type='button'>Contact</button>
             </a>
             {/* CONTACT BUTTON END */}

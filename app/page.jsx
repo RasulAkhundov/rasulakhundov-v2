@@ -572,7 +572,7 @@ function Home() {
                 </div>
 
                 <div className={homeStyle.emailPhone}>
-                  <a href="mailto:rasuldev@mail.ru" className='button_hover'>rasuldev@mail.ru</a>
+                  <a href="mailto:rasul.dev@mail.ru" className='button_hover'>rasul.dev@mail.ru</a>
                   <a href="tel:+994 (55) 507 44 98" className='button_hover'>+994 55 507 44 98</a>
                 </div>
 
