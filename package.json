@@ -11,14 +11,18 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "gsap": "^3.11.5",
+    "i18next": "^23.2.8",
     "jquery": "^3.7.0",
     "locomotive-scroll": "^4.1.4",
     "lottie-web": "^5.11.0",
     "next": "13.4.2",
+    "next-translate": "^2.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2"
   },
   "devDependencies": {
+    "next-translate-plugin": "^2.4.4",
     "sass": "^1.62.1"
   }
 }

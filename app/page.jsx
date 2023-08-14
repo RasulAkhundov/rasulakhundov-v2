@@ -588,7 +588,7 @@ function Home() {
                     <span>socials</span>
 
                     <div className={homeStyle.socialsWrapper}>
-                      <a href="https://www.instagram.com/_raxundov_/" target='_blank' className='button_hover'>Instagram</a>
+                      <a href="https://www.instagram.com/akhundovpk/" target='_blank' className='button_hover'>Instagram</a>
                       <a href="https://github.com/RasulAkhundov" target='_blank' className='button_hover'>Github</a>
                       <a href="https://www.linkedin.com/in/rasulakhundov/" target='_blank' className='button_hover'>Linkedin</a>
                     </div>
