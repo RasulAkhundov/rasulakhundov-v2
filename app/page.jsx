@@ -14,6 +14,8 @@ import ArrowLeftDown from '../public/arrow/left-down.png';
 import Globe from '../public/header/globe.png';
 import FooterLogoWhite from '../public/logo/logo-w.png';
 import ArrowRightBig from '../public/arrow/right-big.png';
+import supportQR from '../public/footer/supportQR.png';
+import supportQR2 from '../public/footer/supportQR2.png';
 
 ////COMPONENTS
 import Cursor from '@/components/Cursor/Cursor';
@@ -572,8 +574,36 @@ function Home() {
                 </div>
 
                 <div className={homeStyle.emailPhone}>
-                  <a href="mailto:rasul.dev@mail.ru" className='button_hover'>rasul.dev@mail.ru</a>
-                  <a href="tel:+994 (55) 507 44 98" className='button_hover'>+994 55 507 44 98</a>
+                  <div className={homeStyle.contactWrapper}>
+                    <a href="mailto:rasul.dev@mail.ru" className='button_hover'>rasul.dev@mail.ru</a>
+                    <a href="tel:+994 (55) 507 44 98" className='button_hover'>+994 55 507 44 98</a>
+                  </div>
+                  <div className={homeStyle.supportWrapper}>
+                    <span>support me</span>
+
+                    <div className={homeStyle.qrArea}>
+
+                      <a href="https://kofe.al/@akhundev" target='_blank'>
+                        <Image
+                          src={supportQR}
+                          width={64}
+                          height={64}
+                          alt='Support QR'
+                        />
+                      </a>
+
+                      <a href="https://www.buymeacoffee.com/RasulAkhundov" target='_blank'>
+                        <Image
+                          src={supportQR2}
+                          width={64}
+                          height={64}
+                          style={{marginLeft: '8px'}}
+                          alt='Support QR'
+                        />
+                      </a>
+                    </div>
+
+                  </div>
                 </div>
 
                 <div className={homeStyle.innerBottom}>
