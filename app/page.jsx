@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import dynamic from 'next/dynamic';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SmoothScrollProvider } from '../utils/SmoothScroll.context';
@@ -28,7 +29,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
 
+  const [ThreeDToggle, setThree3Toggle] = useState(false);
+  const [ModelAnim, setModelAnim] = useState(false);
+
   const { scroll } = useContext(SmoothScrollContext);
+
+  const Model = dynamic(() => import("../components/Model"), { ssr: false });
 
   useEffect(() => {
     function pageLoading() {
@@ -66,6 +72,7 @@ function Home() {
         $('#loadingWrapper').css('display', 'none');
         $('#navbarWrapper').css('opacity', '1');
         $('#headerImgWrapper').css('opacity', '1');
+        $('#headerToggle2d3d').css('opacity', '1');
         $('#headerMarqueeWrapper').css('transform', 'translate(0) rotate(0deg)');
         $('#headerLocatedArea').css('left', '0');
         $('#headerRightElement').css('opacity', '1');
@@ -167,10 +174,24 @@ function Home() {
             {/* LOCATED AREA END */}
 
             {/* BACKGROUND IMAGE START */}
-            <div className={homeStyle.backgroundImgWrapper} id='headerImgWrapper'>
+            <div className={homeStyle.backgroundImgWrapper} style={{ opacity: !ThreeDToggle ? 1 : 0 }} id='headerImgWrapper'>
               <div className={homeStyle.backgroundImg} data-scroll data-scroll-speed="-2" data-scroll-offset="0%, -30%"></div>
             </div>
+
+            <Model ThreeDToggle={ThreeDToggle} ModelAnim={ModelAnim} />
+
             {/* BACKGROUND IMAGE END */}
+
+            {/* 2D AND 3D TOGGLE START */}
+            <div className={homeStyle.toggle2d3d} id='headerToggle2d3d'>
+              <button className={homeStyle.button2d} style={{ background: !ThreeDToggle ? '#F6AE4C' : '#fff', color: !ThreeDToggle ? '#fff': '#000' }} onClick={() => setThree3Toggle(false)}>2D</button>
+              <button className={homeStyle.button3d} style={{ background: !ThreeDToggle ? '#fff' : '#F6AE4C', color: !ThreeDToggle ? '#000': '#fff' }} onClick={() => setThree3Toggle(true)}>3D</button>
+              {
+                ThreeDToggle &&
+                  <button className={homeStyle.buttonStatic} onClick={() => !ModelAnim ? setModelAnim(true) : setModelAnim(false)}>{ModelAnim ? 'Static' : 'Anim'}</button>
+              }
+            </div>
+            {/* 2D AND 3D TOGGLE END */}
 
             {/* RIGHT NAME START */}
             <div className={homeStyle.rightElement} id='headerRightElement'>
@@ -597,7 +618,7 @@ function Home() {
                           src={supportQR2}
                           width={64}
                           height={64}
-                          style={{marginLeft: '8px'}}
+                          style={{ marginLeft: '8px' }}
                           alt='Support QR'
                         />
                       </a>
