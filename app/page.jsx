@@ -184,11 +184,11 @@ function Home() {
 
             {/* 2D AND 3D TOGGLE START */}
             <div className={homeStyle.toggle2d3d} id='headerToggle2d3d'>
-              <button className={homeStyle.button2d} style={{ background: !ThreeDToggle ? '#F6AE4C' : '#fff', color: !ThreeDToggle ? '#fff': '#000' }} onClick={() => setThree3Toggle(false)}>2D</button>
-              <button className={homeStyle.button3d} style={{ background: !ThreeDToggle ? '#fff' : '#F6AE4C', color: !ThreeDToggle ? '#000': '#fff' }} onClick={() => setThree3Toggle(true)}>3D</button>
+              <button className={homeStyle.button2d} style={{ background: !ThreeDToggle ? '#F6AE4C' : '#fff', color: !ThreeDToggle ? '#fff' : '#000' }} onClick={() => setThree3Toggle(false)}>2D</button>
+              <button className={homeStyle.button3d} style={{ background: !ThreeDToggle ? '#fff' : '#F6AE4C', color: !ThreeDToggle ? '#000' : '#fff' }} onClick={() => setThree3Toggle(true)}>3D</button>
               {
                 ThreeDToggle &&
-                  <button className={homeStyle.buttonStatic} onClick={() => !ModelAnim ? setModelAnim(true) : setModelAnim(false)}>{ModelAnim ? 'Static' : 'Anim'}</button>
+                <button className={homeStyle.buttonStatic} onClick={() => !ModelAnim ? setModelAnim(true) : setModelAnim(false)}>{ModelAnim ? 'Static' : 'Anim'}</button>
               }
             </div>
             {/* 2D AND 3D TOGGLE END */}
@@ -307,6 +307,14 @@ function Home() {
               </div>
 
               <div className={homeStyle.allWorksWrapper}>
+                <a href="https://globalalliedsolutions.org/" className='works_hover' target='_blank'>
+                  <div className={homeStyle.singleWorksWrapper} data-work-image="gasWorkImg">
+                    <div className={homeStyle.singleWorksWrapperInner}>
+                      <h2>Global Allied Solutions</h2>
+                      <span>2023</span>
+                    </div>
+                  </div>
+                </a>
                 <a href="https://onveiv.com/" className='works_hover' target='_blank'>
                   <div className={homeStyle.singleWorksWrapper} data-work-image="onveivWorkImg">
                     <div className={homeStyle.singleWorksWrapperInner}>
